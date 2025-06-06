@@ -9,16 +9,12 @@ class  Alunos():
   Self.notas = [10, 7, 6, 4, 3]
   Self.passou =[1, 1, 0, 0, 0]
   
- 
-
  def adicionar(Self):
     addnome = str(input("seu nome"))
     addnota = int(input('sua nota'))
     
     Self.alunos.append(addnome)
     Self.notas.append(addnota)
-
-    
 
  def passou_y_n(Self):
     X = np.array(Self.notas[:-1]).reshape(-1, 1)
@@ -31,6 +27,7 @@ class  Alunos():
     Self.todas_notas = np.array(Self.notas).reshape(-1, 1)
     Self.previsao = Self.modelo.predict(Self.todas_notas)
 
+ def final(Self):
     print("Resultado dos alunos:")
     for nome, resultado in zip(Self.alunos, Self.previsao):
             if resultado == 1:
@@ -39,10 +36,13 @@ class  Alunos():
                 status = "❌ Reprovou"
             print(f"{nome}: {status}")
 
+
+
 al = Alunos()
 
 al.adicionar()
 al.passou_y_n()
+al.final()
 
 
 
