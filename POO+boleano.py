@@ -1,7 +1,6 @@
 
 
 
-
 class biblioteca():
     def __init__(self):
         self.titulos = {"kick ass" : True,
@@ -38,7 +37,7 @@ class biblioteca():
     def adicionar(self):
         
         add = str(input("digite o livro que deseja adicionar:"))
-        if add not in self.titulos:
+        if add in self.titulos:
             self.titulos[add] = True
             print(f"livro: {add}, devolvido")
         else:
