@@ -10,4 +10,8 @@ if sn == "s":
     subprocess.Popen(["Notepad.exe"])
     time.sleep(2)
     pyautogui.write(writ, interval=1)
+if sn == "n":
+    print("ok, até mais")
+else:
+    print("opção inválida, tente novamente")
     
